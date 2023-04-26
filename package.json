@@ -8,7 +8,7 @@
     "dev:remix": "remix watch",
     "start": "cross-env NODE_ENV=production node ./server.js",
     "typecheck": "tsc",
-    "copy-build": "rm -r ../build/* ; cp -r package.json server.js build ../build && mkdir ../build/public && cp -r public/assets public/build favicon.ico ../build/public"
+    "copy-build": "rm -r ../build/build ../build/public ../build/package.json ../build/server.js ; cp -r package.json server.js build ../build && mkdir ../build/public && cp -r public/assets public/build ../build/public && cp favicon.ico ../build/public"
   },
   "dependencies": {
     "@remix-run/express": "^1.15.0",
