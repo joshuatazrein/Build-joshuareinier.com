@@ -27,7 +27,7 @@ function P5Container({
   draw,
   attributes
 }) {
-  let renderer = (0, import_react6.useRef)(null), paramsRef = (0, import_react6.useRef)(parameters), parentRef = (0, import_react6.useRef)(null), sketch = (p) => {
+  let renderer = (0, import_react7.useRef)(null), paramsRef = (0, import_react7.useRef)(parameters), parentRef = (0, import_react7.useRef)(null), sketch = (p) => {
     p.setup = () => {
       renderer.current = p.createCanvas(window.innerWidth, window.innerHeight), renderer.current.addClass("h-full w-full"), p.windowResized = () => {
         (0, import_tiny_invariant2.default)(parentRef.current), p.resizeCanvas(
@@ -37,16 +37,16 @@ function P5Container({
       }, setup(p, paramsRef.current);
     }, p.draw = () => draw(p, paramsRef.current);
   };
-  return (0, import_react6.useEffect)(() => {
+  return (0, import_react7.useEffect)(() => {
     (0, import_tiny_invariant2.default)(parentRef.current);
     let p = new import_p5.default(sketch, parentRef.current);
     return () => p.remove();
   }, []), /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { ref: parentRef, ...attributes });
 }
-var import_react6, import_tiny_invariant2, import_p5, import_jsx_runtime7, init_clientComponents = __esm({
+var import_react7, import_tiny_invariant2, import_p5, import_jsx_runtime7, init_clientComponents = __esm({
   "app/services/clientComponents.tsx"() {
     "use strict";
-    import_react6 = require("react"), import_tiny_invariant2 = __toESM(require("tiny-invariant")), import_p5 = __toESM(require("p5")), import_jsx_runtime7 = require("react/jsx-runtime");
+    import_react7 = require("react"), import_tiny_invariant2 = __toESM(require("tiny-invariant")), import_p5 = __toESM(require("p5")), import_jsx_runtime7 = require("react/jsx-runtime");
   }
 });
 
@@ -228,19 +228,19 @@ __export(root_exports, {
   default: () => App,
   links: () => links
 });
-var import_react9 = require("@remix-run/react");
+var import_react10 = require("@remix-run/react");
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-Z46CBJJC.css";
+var tailwind_default = "/build/_assets/tailwind-23OJXABR.css";
 
 // app/root.tsx
 var import_remix_utils2 = require("remix-utils");
 
 // app/root/route.tsx
-var import_react7 = require("@remix-run/react"), import_react8 = require("react");
+var import_react8 = require("@remix-run/react"), import_react9 = require("react");
 
 // app/root/Boxes.tsx
-var import_react3 = require("react");
+var import_react4 = require("react");
 
 // app/assets/vid/what-ive-done_cover.webm
 var what_ive_done_cover_default = "/build/_assets/what-ive-done_cover-UIUZJZJN.webm";
@@ -576,7 +576,7 @@ var import_jsx_runtime4 = require("react/jsx-runtime"), allTags = {
 // app/root/Boxes.tsx
 var import_lodash2 = __toESM(require("lodash")), import_matter_js = __toESM(require("matter-js")), import_tiny_invariant = __toESM(require("tiny-invariant"));
 
-// app/services/util.ts
+// app/services/clientFunctions.tsx
 var q = (selector) => document.querySelector(selector), checkIsMobile = () => window != null && window.document ? /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
   navigator.userAgent
 ) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(
@@ -589,13 +589,25 @@ var import_lodash = __toESM(require("lodash")), isTagOfType = (tag, role) => (ro
 ), isRole = (role) => import_lodash.default.keys(allTags).includes(role), isProjectId = (projectId) => import_lodash.default.keys(projects).includes(projectId);
 
 // app/root/Boxes.tsx
-var import_matter_attractors = __toESM(require("matter-attractors")), import_react4 = require("@remix-run/react"), import_jsx_runtime5 = require("react/jsx-runtime");
+var import_matter_attractors = __toESM(require("matter-attractors")), import_react5 = require("@remix-run/react");
+
+// app/services/hooks.ts
+var import_react3 = require("react");
+var useIsMobile = () => {
+  let [isMobile, setIsMobile] = (0, import_react3.useState)(!1);
+  return (0, import_react3.useEffect)(() => {
+    setIsMobile(checkIsMobile());
+  }, []), isMobile;
+};
+
+// app/root/Boxes.tsx
+var import_jsx_runtime5 = require("react/jsx-runtime");
 import_matter_js.default.use(import_matter_attractors.default);
 function Boxes({
   role,
   tag
 }) {
-  let shownProjects = (0, import_react3.useMemo)(
+  let shownProjects = (0, import_react4.useMemo)(
     () => import_lodash2.default.map(
       import_lodash2.default.entries(projects).filter(
         ([_id, project]) => (!role || project.role === role) && (!tag || project.tags.includes(tag))
@@ -603,10 +615,10 @@ function Boxes({
       0
     ),
     [role, tag]
-  ), shownTags = (0, import_react3.useMemo)(
+  ), shownTags = (0, import_react4.useMemo)(
     () => tag ? [tag] : role ? allTags[role] : import_lodash2.default.union(...import_lodash2.default.values(allTags)),
     [role, tag]
-  ), shownRoles = (0, import_react3.useMemo)(() => role ? [role] : import_lodash2.default.keys(allTags), [role]), engine = (0, import_react3.useRef)(), nextAnimationCall = (0, import_react3.useRef)(), frame = (0, import_react3.useRef)(null), bodies = (0, import_react3.useRef)([]), constraints = (0, import_react3.useRef)([]), pins = (0, import_react3.useRef)([]), MAX_DISTANCE = 300, autoCreateConstraints = (id) => {
+  ), shownRoles = (0, import_react4.useMemo)(() => role ? [role] : import_lodash2.default.keys(allTags), [role]), engine = (0, import_react4.useRef)(), nextAnimationCall = (0, import_react4.useRef)(), frame = (0, import_react4.useRef)(null), bodies = (0, import_react4.useRef)([]), constraints = (0, import_react4.useRef)([]), pins = (0, import_react4.useRef)([]), MAX_DISTANCE = 300, autoCreateConstraints = (id) => {
     if (isRole(id)) {
       pins.current.find((pin) => isRole(pin.id)) || createPin(
         id,
@@ -666,7 +678,7 @@ function Boxes({
       })
     };
     return constraints.current.push(constraint), (0, import_tiny_invariant.default)(engine.current), import_matter_js.default.Composite.add(engine.current.world, constraint.constraint), constraint;
-  }, createBody = (id, xDecimal, yDecimal, options) => {
+  }, isMobile = useIsMobile(), createBody = (id, xDecimal, yDecimal, options) => {
     (0, import_tiny_invariant.default)(frame.current && engine.current);
     let el = q(`[data-matter-id=${id}]`), body = {
       body: import_matter_js.default.Bodies.rectangle(
@@ -685,7 +697,7 @@ function Boxes({
           ...options,
           plugin: {
             ...options == null ? void 0 : options.plugin,
-            attractors: [
+            attractors: isMobile ? void 0 : [
               function(bodyA, bodyB) {
                 if (isProjectId(bodyB.label) !== isProjectId(bodyA.label))
                   return;
@@ -709,7 +721,8 @@ function Boxes({
       el,
       render() {
         let { x, y } = this.body.position;
-        this.el.style.top = `${y - this.el.clientHeight / 2}px`, this.el.style.left = `${x - this.el.clientWidth / 2}px`;
+        if (this.el.style.top = `${y - this.el.clientHeight / 2}px`, this.el.style.left = `${x - this.el.clientWidth / 2}px`, isMobile)
+          return;
         let diffX = this.body.position.x - window.innerWidth / 2, diffY = this.body.position.y - window.innerHeight / 2, distance = Math.max(
           0,
           400 - import_matter_js.default.Vector.magnitude({ x: diffX, y: diffY })
@@ -734,7 +747,7 @@ function Boxes({
       import_matter_js.default.Engine.update(engine.current), nextAnimationCall.current = requestAnimationFrame(rerender);
     };
     rerender();
-  }, oldWidth = (0, import_react3.useRef)(0), oldHeight = (0, import_react3.useRef)(0), onResize = () => {
+  }, oldWidth = (0, import_react4.useRef)(0), oldHeight = (0, import_react4.useRef)(0), onResize = () => {
     let newWidth = window.innerWidth, newHeight = window.innerHeight, xSizeRatio = newWidth / oldWidth.current, ySizeRatio = newHeight / oldHeight.current;
     for (let body of bodies.current)
       import_matter_js.default.Body.setPosition(body.body, {
@@ -748,7 +761,7 @@ function Boxes({
       };
     oldWidth.current = newWidth, oldHeight.current = newHeight;
   };
-  (0, import_react3.useEffect)(() => (createWorld(), oldWidth.current = window.innerWidth, oldHeight.current = window.innerHeight, window.addEventListener("resize", onResize), () => {
+  (0, import_react4.useEffect)(() => (createWorld(), oldWidth.current = window.innerWidth, oldHeight.current = window.innerHeight, window.addEventListener("resize", onResize), () => {
     nextAnimationCall.current && cancelAnimationFrame(nextAnimationCall.current), engine.current && import_matter_js.default.Engine.clear(engine.current), bodies.current = [], constraints.current = [], pins.current = [], window.removeEventListener("resize", onResize);
   }), []);
   let updateBodyCount = () => {
@@ -772,15 +785,15 @@ function Boxes({
       import_matter_js.default.Composite.remove(engine.current.world, deletedBody.body), import_lodash2.default.pull(bodies.current, deletedBody);
     }
   };
-  (0, import_react3.useEffect)(() => {
+  (0, import_react4.useEffect)(() => {
     nextAnimationCall.current && updateBodyCount();
   }, [shownRoles, shownTags, shownProjects]);
-  let location = (0, import_react4.useLocation)(), setParams = (keys) => {
+  let location = (0, import_react5.useLocation)(), setParams = (keys) => {
     let params = new URLSearchParams(location.search);
     return import_lodash2.default.entries(keys).forEach(
       ([key, value]) => value ? params.set(key, value) : params.delete(key)
     ), `${location.pathname}?${params.toString()}`;
-  }, NAV_BUTTON = "bg-accent-light hover:bg-accent-dark hover:border-accent-light border border-transparent transition-[background,transform] hover:scale-125 duration-300 w-fit px-2 rounded-full flex z-10 drop-shadow-xl";
+  }, NAV_BUTTON = "bg-accent-light hover:bg-accent-dark mouse:hover:border-accent-light border border-transparent transition-[background,transform] mouse:hover:scale-125 duration-300 w-fit px-2 rounded-full flex z-10 drop-shadow-xl";
   return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(
     "div",
     {
@@ -791,8 +804,8 @@ function Boxes({
           "div",
           {
             "data-matter-id": projectId,
-            className: "rounded-full h-[33vh] w-[33vh] overflow-hidden relative opacity-50 hover:opacity-100 hover:scale-125 transition-[opacity,transform] duration-500 cursor-pointer hover:z-10",
-            children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react4.Link, { to: "/" + projectId + location.search, children: (0, import_react3.cloneElement)(projects[projectId].background, {
+            className: "rounded-full h-[33vh] w-[33vh] overflow-hidden relative opacity-50 hover:opacity-100 hover:scale-125 transition-[opacity,transform,top,left] duration-500 cursor-pointer hover:z-10",
+            children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react5.Link, { to: "/" + projectId + location.search, children: (0, import_react4.cloneElement)(projects[projectId].background, {
               autoPlay: !0,
               muted: !0,
               loop: !0,
@@ -801,34 +814,34 @@ function Boxes({
           },
           projectId
         )),
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("button", { "data-matter-id": "headline", className: `text-xl ${NAV_BUTTON}`, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react4.Link, { to: "/", children: "Joshua Tazman Reinier" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("button", { "data-matter-id": "headline", className: `text-xl ${NAV_BUTTON}`, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react5.Link, { to: "/", children: "Joshua Tazman Reinier" }) }),
         shownRoles.map((role2) => /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
           "button",
           {
             "data-matter-id": role2,
             className: `text-lg ${NAV_BUTTON}`,
-            children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react4.Link, { to: setParams({ role: role2, tag: null }), children: role2 })
+            children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react5.Link, { to: setParams({ role: role2, tag: null }), children: role2 })
           },
           role2
         )),
-        shownTags.map((tag2) => /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("button", { "data-matter-id": tag2, className: NAV_BUTTON, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react4.Link, { to: setParams({ tag: tag2, role: getTagRole(tag2) }), children: tag2 }) }, tag2))
+        shownTags.map((tag2) => /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("button", { "data-matter-id": tag2, className: NAV_BUTTON, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react5.Link, { to: setParams({ tag: tag2, role: getTagRole(tag2) }), children: tag2 }) }, tag2))
       ]
     }
   );
 }
 
 // app/services/components.tsx
-var import_react5 = require("react"), import_remix_utils = require("remix-utils"), import_jsx_runtime6 = require("react/jsx-runtime");
+var import_react6 = require("react"), import_remix_utils = require("remix-utils"), import_jsx_runtime6 = require("react/jsx-runtime");
 function ClientOnlyImport({
   importChildren
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_remix_utils.ClientOnly, { children: () => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_react5.Suspense, { children: importChildren() }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_remix_utils.ClientOnly, { children: () => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_react6.Suspense, { children: importChildren() }) });
 }
 
 // app/root/route.tsx
-var import_jsx_runtime9 = require("react/jsx-runtime"), LazyBackground = (0, import_react8.lazy)(() => Promise.resolve().then(() => (init_Background(), Background_exports)));
+var import_jsx_runtime9 = require("react/jsx-runtime"), LazyBackground = (0, import_react9.lazy)(() => Promise.resolve().then(() => (init_Background(), Background_exports)));
 function Index() {
-  let location = (0, import_react7.useLocation)(), search = new URLSearchParams(location.search), role = search.get("role"), tag = role && search.get("tag") || void 0, isMobile = checkIsMobile();
+  let location = (0, import_react8.useLocation)(), search = new URLSearchParams(location.search), role = search.get("role"), tag = role && search.get("tag") || void 0, isMobile = useIsMobile();
   return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "fixed top-0 left-0 w-screen h-screen", children: [
     !isMobile && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "fixed top-0 left-0 h-screen w-screen -z-10", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(ClientOnlyImport, { importChildren: () => /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(LazyBackground, {}) }) }),
     /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Boxes, { role, tag })
@@ -844,16 +857,16 @@ function App() {
     /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("head", { children: [
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("meta", { charSet: "utf-8" }),
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("meta", { name: "viewport", content: "width=device-width,initial-scale=1" }),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react9.Meta, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react9.Links, {})
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react10.Meta, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react10.Links, {})
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("body", { children: [
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Index, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react9.Outlet, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react10.Outlet, {}),
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_remix_utils2.ExternalScripts, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react9.ScrollRestoration, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react9.Scripts, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react9.LiveReload, {})
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react10.ScrollRestoration, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react10.Scripts, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react10.LiveReload, {})
     ] })
   ] });
 }
@@ -863,10 +876,10 @@ var route_exports = {};
 __export(route_exports, {
   default: () => Project
 });
-var import_react10 = require("@remix-run/react"), import_react_router_dom = require("react-router-dom");
+var import_react11 = require("@remix-run/react"), import_react_router_dom = require("react-router-dom");
 var import_jsx_runtime11 = require("react/jsx-runtime");
 function Project() {
-  let { projectId } = (0, import_react_router_dom.useParams)(), location = (0, import_react10.useLocation)(), project = projects[projectId];
+  let { projectId } = (0, import_react_router_dom.useParams)(), location = (0, import_react11.useLocation)(), project = projects[projectId];
   return /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "fixed top-0 left-0 h-full w-full p-8 z-10 flex items-center justify-center", children: [
     /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_react_router_dom.Link, { to: "/" + location.search, children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "h-full w-full absolute top-0 left-0 bg-black/50" }) }),
     /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "backdrop-blur bg-black/50 rounded-lg border border-accent-light max-w-4xl max-h-full overflow-y-auto relative", children: [
@@ -883,7 +896,7 @@ function Project() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "86d89ed7", entry: { module: "/build/entry.client-V4QOYE5V.js", imports: ["/build/_shared/chunk-NQU33KBR.js", "/build/_shared/chunk-A333RND5.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-B7RZSJSC.js", imports: ["/build/_shared/chunk-4KXG5YPX.js", "/build/_shared/chunk-XFGLJB2M.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$projectId": { id: "routes/$projectId", parentId: "root", path: ":projectId", index: void 0, caseSensitive: void 0, module: "/build/routes/$projectId-NNUF2QY5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-86D89ED7.js" };
+var assets_manifest_default = { version: "51dcb3a4", entry: { module: "/build/entry.client-V4QOYE5V.js", imports: ["/build/_shared/chunk-NQU33KBR.js", "/build/_shared/chunk-A333RND5.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KMGVNTLT.js", imports: ["/build/_shared/chunk-4KXG5YPX.js", "/build/_shared/chunk-XFGLJB2M.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$projectId": { id: "routes/$projectId", parentId: "root", path: ":projectId", index: void 0, caseSensitive: void 0, module: "/build/routes/$projectId-NNUF2QY5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-51DCB3A4.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { unstable_cssModules: !1, unstable_cssSideEffectImports: !1, unstable_dev: !1, unstable_postcss: !1, unstable_tailwind: !0, unstable_vanillaExtract: !1, v2_errorBoundary: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
