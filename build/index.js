@@ -577,7 +577,11 @@ var import_jsx_runtime4 = require("react/jsx-runtime"), allTags = {
 var import_lodash2 = __toESM(require("lodash")), import_matter_js = __toESM(require("matter-js")), import_tiny_invariant = __toESM(require("tiny-invariant"));
 
 // app/services/util.ts
-var q = (selector) => document.querySelector(selector);
+var q = (selector) => document.querySelector(selector), checkIsMobile = () => window != null && window.document ? /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
+  navigator.userAgent
+) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(
+  navigator.userAgent.substring(0, 4)
+) : !1;
 
 // app/types/typeGuards.ts
 var import_lodash = __toESM(require("lodash")), isTagOfType = (tag, role) => (role ? allTags[role] : import_lodash.default.values(allTags).flat()).includes(tag), getTagRole = (tag) => import_lodash.default.keys(allTags).find(
@@ -824,9 +828,9 @@ function ClientOnlyImport({
 // app/root/route.tsx
 var import_jsx_runtime9 = require("react/jsx-runtime"), LazyBackground = (0, import_react8.lazy)(() => Promise.resolve().then(() => (init_Background(), Background_exports)));
 function Index() {
-  let location = (0, import_react7.useLocation)(), search = new URLSearchParams(location.search), role = search.get("role"), tag = role && search.get("tag") || void 0;
+  let location = (0, import_react7.useLocation)(), search = new URLSearchParams(location.search), role = search.get("role"), tag = role && search.get("tag") || void 0, isMobile = checkIsMobile();
   return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "fixed top-0 left-0 w-screen h-screen", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "fixed top-0 left-0 h-screen w-screen -z-10", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(ClientOnlyImport, { importChildren: () => /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(LazyBackground, {}) }) }),
+    !isMobile && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "fixed top-0 left-0 h-screen w-screen -z-10", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(ClientOnlyImport, { importChildren: () => /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(LazyBackground, {}) }) }),
     /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Boxes, { role, tag })
   ] });
 }
@@ -879,7 +883,7 @@ function Project() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "23047170", entry: { module: "/build/entry.client-V4QOYE5V.js", imports: ["/build/_shared/chunk-NQU33KBR.js", "/build/_shared/chunk-A333RND5.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-736SNIR4.js", imports: ["/build/_shared/chunk-4KXG5YPX.js", "/build/_shared/chunk-XFGLJB2M.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$projectId": { id: "routes/$projectId", parentId: "root", path: ":projectId", index: void 0, caseSensitive: void 0, module: "/build/routes/$projectId-NNUF2QY5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-23047170.js" };
+var assets_manifest_default = { version: "86d89ed7", entry: { module: "/build/entry.client-V4QOYE5V.js", imports: ["/build/_shared/chunk-NQU33KBR.js", "/build/_shared/chunk-A333RND5.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-B7RZSJSC.js", imports: ["/build/_shared/chunk-4KXG5YPX.js", "/build/_shared/chunk-XFGLJB2M.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$projectId": { id: "routes/$projectId", parentId: "root", path: ":projectId", index: void 0, caseSensitive: void 0, module: "/build/routes/$projectId-NNUF2QY5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-86D89ED7.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { unstable_cssModules: !1, unstable_cssSideEffectImports: !1, unstable_dev: !1, unstable_postcss: !1, unstable_tailwind: !0, unstable_vanillaExtract: !1, v2_errorBoundary: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
