@@ -126,7 +126,7 @@ __export(root_exports, {
 var import_react3 = require("@remix-run/react");
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-N5CJET7I.css";
+var tailwind_default = "/build/_assets/tailwind-RFSBOYY3.css";
 
 // app/components/Tag.tsx
 var import_react2 = require("@remix-run/react"), import_jsx_runtime2 = require("react/jsx-runtime");
@@ -144,7 +144,7 @@ var import_jsx_runtime3 = require("react/jsx-runtime");
 function Section({
   children
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "my-8 max-w-4xl space-y-2 px-8 text-center", children });
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mx-auto my-8 max-w-4xl space-y-2 px-8 text-center", children });
 }
 
 // app/root.tsx
@@ -152,14 +152,14 @@ var import_jsx_runtime4 = require("react/jsx-runtime"), links = () => [
   { rel: "stylesheet", href: tailwind_default }
 ];
 function App() {
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("html", { lang: "en", className: "h-full", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("html", { lang: "en", children: [
     /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("head", { children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("meta", { charSet: "utf-8" }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("meta", { name: "viewport", content: "width=device-width,initial-scale=1" }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Meta, {}),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Links, {})
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("body", { className: "flex h-full w-full flex-col items-center overflow-y-auto bg-gradient-to-br from-black to-gray-900 px-8 font-sans text-white", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("body", { className: "min-h-screen bg-gradient-to-br from-black to-gray-900 px-8 font-sans text-white", children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Section, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
         import_react3.Link,
         {
@@ -626,59 +626,69 @@ var import_jsx_runtime10 = require("react/jsx-runtime");
 function Role2() {
   let role = (0, import_react7.useParams)().role, [search, setSearch] = (0, import_react7.useSearchParams)(), filter = search.get("filter"), setFilter = (newFilter) => {
     search.set("filter", newFilter), setSearch(search);
-  };
+  }, frame = (0, import_react8.useRef)(null), sections = {
+    artist: () => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_jsx_runtime10.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { children: [
+      "My creative work encompasses",
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("hypertext"), children: "hypertext" }),
+      " and",
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("performance"), children: "performance" }),
+      ", deconstructing speech and writing by placing it in multimedia, coded ecosystems."
+    ] }) }),
+    researcher: () => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_jsx_runtime10.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { children: [
+      "My ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("teaching"), children: "teaching" }),
+      " and",
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("writing"), children: "writing" }),
+      " is informed by posthumanism and deconstruction, investigating technology and intermediality to find new approaches to the human."
+    ] }) }),
+    designer: () => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+      "As a ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("web"), children: "web" }),
+      " and",
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("multimedia"), children: "multimedia" }),
+      " designer, I create tools for thought and innovative platforms for communication."
+    ] })
+  }, thisWorks = works[role].filter(
+    (work) => !filter || work.filter === filter
+  );
   return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { children: {
-      artist: () => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_jsx_runtime10.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { children: [
-        "My creative work encompasses",
-        " ",
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("hypertext"), children: "hypertext" }),
-        " and",
-        " ",
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("performance"), children: "performance" }),
-        ", deconstructing speech and writing by placing it in multimedia, coded ecosystems."
-      ] }) }),
-      researcher: () => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_jsx_runtime10.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { children: [
-        "My ",
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("teaching"), children: "teaching" }),
-        " and",
-        " ",
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("writing"), children: "writing" }),
-        " is informed by posthumanism and deconstruction, investigating technology and intermediality to find new approaches to the human."
-      ] }) }),
-      designer: () => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
-        "As a ",
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("web"), children: "web" }),
-        " and",
-        " ",
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("multimedia"), children: "multimedia" }),
-        " designer, I create tools for thought and innovative platforms for communication."
-      ] })
-    }[role]() }),
-    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "scrollbar-none flex w-full max-w-5xl flex-wrap justify-around space-x-2 space-y-2", children: works[role].filter((work) => !filter || work.filter === filter).map(({ title, subtitle, route, background }) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
-      import_react7.NavLink,
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { children: sections[role]() }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+      "div",
       {
-        to: route + (search && "?" + search),
-        className: ({ isActive }) => " relative flex h-[25vh] w-[25vh] flex-none flex-col items-center justify-center overflow-hidden rounded-full transition-transform duration-500 hover:z-10 hover:scale-125",
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-xl shadow-lg", children: title }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-sm text-gray-200 shadow-lg", children: subtitle }),
-          (0, import_react8.cloneElement)(background, {
-            autoPlay: !0,
-            muted: !0,
-            loop: !0,
-            className: "object-cover w-full h-full absolute top-0 left-0 -z-10 rounded-full"
-          })
-        ]
-      },
-      route
-    )) }),
+        className: "scrollbar-none flex w-full flex-wrap justify-around space-x-2 space-y-2",
+        ref: frame,
+        children: thisWorks.map(({ title, subtitle, route, background }) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
+          import_react7.NavLink,
+          {
+            "data-matter-label": route,
+            to: route + (search && "?" + search),
+            className: ({ isActive }) => "relative flex h-[23vw] w-[23vw] flex-none flex-col items-center justify-center overflow-hidden rounded-full transition-transform duration-500 hover:z-10 hover:scale-125",
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-xl shadow-lg", children: title }),
+              /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-sm text-gray-200 shadow-lg", children: subtitle }),
+              (0, import_react8.cloneElement)(background, {
+                autoPlay: !0,
+                muted: !0,
+                loop: !0,
+                className: "object-cover w-full h-full absolute top-0 left-0 -z-10 rounded-full"
+              })
+            ]
+          },
+          route
+        ))
+      }
+    ),
     /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react7.Outlet, {})
   ] });
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-6YBMEKDG.js", imports: ["/build/_shared/chunk-6ZVS2WHG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-MOC4L3A3.js", imports: ["/build/_shared/chunk-J5UV56GH.js", "/build/_shared/chunk-5QJRW2PY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-5RVAKC6R.js", imports: ["/build/_shared/chunk-7JHAYJVV.js", "/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-LTNK3JFR.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-I5KMVBKS.js", imports: ["/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "484bf106", hmr: void 0, url: "/build/manifest-484BF106.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-6YBMEKDG.js", imports: ["/build/_shared/chunk-6ZVS2WHG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-FRNDYHNG.js", imports: ["/build/_shared/chunk-J5UV56GH.js", "/build/_shared/chunk-67GT7CWQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-T7ZZT3DM.js", imports: ["/build/_shared/chunk-7JHAYJVV.js", "/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-LTNK3JFR.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-UJZRRIVC.js", imports: ["/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "3651985e", hmr: void 0, url: "/build/manifest-3651985E.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

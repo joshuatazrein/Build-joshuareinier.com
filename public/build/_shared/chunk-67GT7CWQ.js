@@ -1,0 +1,1 @@
+import{b as e,p as t}from"/build/_shared/chunk-6ZVS2WHG.js";var n=e(t());function l({children:i}){return(0,n.jsx)("div",{className:"mx-auto my-8 max-w-4xl space-y-2 px-8 text-center",children:i})}export{l as a};
