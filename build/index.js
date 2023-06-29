@@ -126,7 +126,7 @@ __export(root_exports, {
 var import_react3 = require("@remix-run/react");
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-AISSQIC7.css";
+var tailwind_default = "/build/_assets/tailwind-N5CJET7I.css";
 
 // app/components/Tag.tsx
 var import_react2 = require("@remix-run/react"), import_jsx_runtime2 = require("react/jsx-runtime");
@@ -160,7 +160,14 @@ function App() {
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Links, {})
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("body", { className: "flex h-full w-full flex-col items-center overflow-y-auto bg-gradient-to-br from-black to-gray-900 px-8 font-sans text-white", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Section, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Link, { className: "font-serif text-4xl", to: "/", children: "Joshua Tazman Reinier" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Section, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+        import_react3.Link,
+        {
+          className: "rounded-full border-blue-500/50 px-4 py-1 font-serif text-4xl transition-colors duration-300 hover:border hover:bg-gray-700/50",
+          to: "/",
+          children: "Joshua Tazman Reinier"
+        }
+      ) }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Section, { children: [
         /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
           "is an",
@@ -660,7 +667,7 @@ function Role2() {
             autoPlay: !0,
             muted: !0,
             loop: !0,
-            className: "object-cover w-full h-full absolute top-0 left-0 -z-10"
+            className: "object-cover w-full h-full absolute top-0 left-0 -z-10 rounded-full"
           })
         ]
       },
@@ -671,7 +678,7 @@ function Role2() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-6YBMEKDG.js", imports: ["/build/_shared/chunk-6ZVS2WHG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-CCTN4U2Q.js", imports: ["/build/_shared/chunk-J5UV56GH.js", "/build/_shared/chunk-5QJRW2PY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-Y2C4KG4D.js", imports: ["/build/_shared/chunk-7JHAYJVV.js", "/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-LTNK3JFR.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-I5KMVBKS.js", imports: ["/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "4e79e421", hmr: void 0, url: "/build/manifest-4E79E421.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-6YBMEKDG.js", imports: ["/build/_shared/chunk-6ZVS2WHG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-MOC4L3A3.js", imports: ["/build/_shared/chunk-J5UV56GH.js", "/build/_shared/chunk-5QJRW2PY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-5RVAKC6R.js", imports: ["/build/_shared/chunk-7JHAYJVV.js", "/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-LTNK3JFR.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-I5KMVBKS.js", imports: ["/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "484bf106", hmr: void 0, url: "/build/manifest-484BF106.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
