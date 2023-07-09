@@ -253,6 +253,30 @@ var unfolding_cover_default = "/build/_assets/unfolding-cover-IS6XFYVX.webm";
 // app/assets/img/time-ruler-cover.webp
 var time_ruler_cover_default = "/build/_assets/time-ruler-cover-2O7WV6LD.webp";
 
+// app/assets/img/particularities_cover.png
+var particularities_cover_default2 = "/build/_assets/particularities_cover-4RQNHSNZ.png";
+
+// app/assets/img/unfolding_placeholder.webp
+var unfolding_placeholder_default = "/build/_assets/unfolding_placeholder-SDFKITYJ.webp";
+
+// app/assets/img/what-ive-done_cover.webp
+var what_ive_done_cover_default2 = "/build/_assets/what-ive-done_cover-LSUR635V.webp";
+
+// app/assets/img/raining_placeholder.webp
+var raining_placeholder_default = "/build/_assets/raining_placeholder-KWV3AH6U.webp";
+
+// app/assets/img/am_cover.webp
+var am_cover_default2 = "/build/_assets/am_cover-3LU35Z2G.webp";
+
+// app/assets/img/a-max-patch_cover.webp
+var a_max_patch_cover_default2 = "/build/_assets/a-max-patch_cover-5HIHISNM.webp";
+
+// app/assets/img/grants-video_placeholder.webp
+var grants_video_placeholder_default = "/build/_assets/grants-video_placeholder-KIPSSWVQ.webp";
+
+// app/assets/img/mmg-logo_placeholder.webp
+var mmg_logo_placeholder_default = "/build/_assets/mmg-logo_placeholder-VMMDW4F5.webp";
+
 // app/assets/assets.tsx
 var icons = {
   fullScreen: fullscreen_default
@@ -267,7 +291,15 @@ var icons = {
   riverbankCover: riverbank_cover_default,
   finnegansWakeCover: finnegans_wake_cover_default,
   headshot: joshua_tazman_default,
-  timeRulerCover: time_ruler_cover_default
+  timeRulerCover: time_ruler_cover_default,
+  particularitiesPlaceholder: particularities_cover_default2,
+  unfoldingPlaceholder: unfolding_placeholder_default,
+  whatIveDonePlaceholder: what_ive_done_cover_default2,
+  rainingPlaceholder: raining_placeholder_default,
+  amPlaceholder: am_cover_default2,
+  aMaxPatchPlaceholder: a_max_patch_cover_default2,
+  grantsVideoPlaceholder: grants_video_placeholder_default,
+  mmgLogoPlaceholder: mmg_logo_placeholder_default
 }, videos = {
   rainingCover: rain_cover_default,
   whatIveDoneCover: what_ive_done_cover_default,
@@ -343,14 +375,26 @@ var import_jsx_runtime7 = require("react/jsx-runtime"), works = {
         /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("i", { children: "Particularities" }),
         " is an experiment in communal interior monologue, assisted by technology. The work was produced using a sound-processing patch in Max/MSP, which communicates with a webpage that processes speech recognition and visuals. Audio is spoken into a microphone from a stage covered in reflective curtains, which the computer transcribes and records. Fragments of text flash on the screen, which also manipulates the computer\u2019s webcam to display a pixelated silhouette of the speaker, processed through Javascript. In parallel, the computer continually selects random-access recordings, mangled through pitch and time manipulations until they sound like glitches, ghosts\u2014or inner demons. A series of prompts cycle through the screen, alternately asking the participants to speak and questioning the nature of what they are actually doing."
       ] }),
-      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("video", { src: videos.particularitiesCover })
+      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+        "video",
+        {
+          src: videos.particularitiesCover,
+          poster: images.particularitiesPlaceholder
+        }
+      )
     },
     {
       title: "Unfolding",
       route: "unfolding",
       filter: "performance",
       subtitle: "performer, machine-learning, & mylar",
-      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("video", { src: videos.unfoldingCover }),
+      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+        "video",
+        {
+          src: videos.unfoldingCover,
+          poster: images.unfoldingPlaceholder
+        }
+      ),
       content: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
         "iframe",
         {
@@ -386,7 +430,13 @@ var import_jsx_runtime7 = require("react/jsx-runtime"), works = {
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { children: "Sam Blieden produced & directed the video, with support from Henry Nelson & Will Curry. The band is the Self-Prescribing Doctors Union, comprised of Henry Nelson (guitar), Will Curry (saxophone), Owen Frankel (bass), and Jeremy McCabe (drums). Truly, this piece is what all of them have done to bring this idea to fruition." })
       ] }),
-      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("video", { src: videos.whatIveDoneCover })
+      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+        "video",
+        {
+          src: videos.whatIveDoneCover,
+          poster: images.whatIveDonePlaceholder
+        }
+      )
     },
     {
       title: "raining",
@@ -398,7 +448,13 @@ var import_jsx_runtime7 = require("react/jsx-runtime"), works = {
         " is a kinetic digital poem in which fragments of words flitter across the screen in response to user scrolling. It explores the capacity for text to speak for itself, using a shifting sound background to paint a landscape of unsettled community."
       ] }),
       content: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(ViewButton, { href: "/works/raining/index.html", children: "view work" }),
-      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("video", { src: videos.rainingCover })
+      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+        "video",
+        {
+          src: videos.rainingCover,
+          poster: images.rainingPlaceholder
+        }
+      )
     },
     {
       title: "AM",
@@ -410,14 +466,20 @@ var import_jsx_runtime7 = require("react/jsx-runtime"), works = {
         " juxtaposes text fragments with radio interference, creating a chaotic nexus of interruption and challenging the reader to navigate the boundary between sound and sense."
       ] }),
       content: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(ViewButton, { href: "/works/am/index.html", children: "view work" }),
-      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("video", { src: videos.amCover })
+      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("video", { src: videos.amCover, poster: images.amPlaceholder })
     },
     {
       title: "a max patch i made in 2020",
       route: "a-max-patch",
       filter: "performance",
       subtitle: "for live-processed solo zoomer",
-      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("video", { src: videos.aMaxPatchIMadeIn2020Cover }),
+      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+        "video",
+        {
+          src: videos.aMaxPatchIMadeIn2020Cover,
+          poster: images.aMaxPatchPlaceholder
+        }
+      ),
       description: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { children: "I produced this piece for a remote music technology class during the COVID lockdown. In it, I introduce the piece for the duration of the piece, processing the Zoom Audio to progressively glitch and distort the voice until it is intelligible. The piece slowly transforms the speaking voice into a computer-generated sawtooth wave, and then a spasming MIDI electric bass, becoming a cyborg speaker\u2014or maybe it was just Zoom glitching out all along\u2014or maybe that's just my voice." }),
       content: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
         "iframe",
@@ -508,7 +570,13 @@ var import_jsx_runtime7 = require("react/jsx-runtime"), works = {
           allowFullScreen: !0
         }
       ),
-      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("video", { src: videos.grantsVideoCover })
+      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+        "video",
+        {
+          src: videos.grantsVideoCover,
+          poster: images.grantsVideoPlaceholder
+        }
+      )
     },
     {
       title: "TIMARA History",
@@ -542,7 +610,7 @@ var import_jsx_runtime7 = require("react/jsx-runtime"), works = {
       route: "mmg-logo",
       filter: "multimedia",
       subtitle: "Animated logo",
-      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("video", { src: videos.mmgLogoCover }),
+      background: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("video", { src: videos.mmgLogoCover, poster: images.mmgLogoPlaceholder }),
       description: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { children: "I animated the logo for Modern Music Guild, a club at Oberlin that brings experimental artists to campus for concerts and workshops. The MMG Logo is evocative of a sound wave. So I used canvas-sketch-util to generate noise which ripples the image, and used Canvas getImageData() and putImageData() to continually ripple the wave outwards." }),
       content: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
         "iframe",
@@ -681,7 +749,7 @@ function Role2() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-6YBMEKDG.js", imports: ["/build/_shared/chunk-6ZVS2WHG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-3UKMVSCW.js", imports: ["/build/_shared/chunk-UUMDPANW.js", "/build/_shared/chunk-GLCLLSTV.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-V35WJ5KG.js", imports: ["/build/_shared/chunk-7JHAYJVV.js", "/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-LTNK3JFR.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-UEYVSA5Y.js", imports: ["/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "d8fdf1ef", hmr: void 0, url: "/build/manifest-D8FDF1EF.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-6YBMEKDG.js", imports: ["/build/_shared/chunk-6ZVS2WHG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-3UKMVSCW.js", imports: ["/build/_shared/chunk-UUMDPANW.js", "/build/_shared/chunk-GLCLLSTV.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-VUCFHVTV.js", imports: ["/build/_shared/chunk-VFWGOMYG.js", "/build/_shared/chunk-GC7MKPDH.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-UMLESLJ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-3UVVWNBF.js", imports: ["/build/_shared/chunk-GC7MKPDH.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "d6e169c5", hmr: void 0, url: "/build/manifest-D6E169C5.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
