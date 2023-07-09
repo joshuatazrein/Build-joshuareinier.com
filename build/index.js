@@ -126,7 +126,7 @@ __export(root_exports, {
 var import_react3 = require("@remix-run/react");
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-733FTPEW.css";
+var tailwind_default = "/build/_assets/tailwind-VSQ55NTA.css";
 
 // app/components/Tag.tsx
 var import_react2 = require("@remix-run/react"), import_jsx_runtime2 = require("react/jsx-runtime");
@@ -728,16 +728,16 @@ function Role2() {
           {
             "data-matter-label": route,
             to: route + (search && "?" + search),
-            className: ({ isActive }) => "relative flex aspect-square w-[300px] max-w-full flex-none flex-col items-center justify-center overflow-hidden rounded-full transition-transform duration-500 hover:z-10 hover:scale-125",
+            className: ({ isActive }) => "relative flex aspect-square w-[300px] max-w-full flex-none flex-col items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-slate-800 to-slate-900 transition-transform duration-500 hover:z-10 hover:scale-125",
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-xl shadow-lg", children: title }),
-              /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-sm text-gray-200 shadow-lg", children: subtitle }),
               (0, import_react8.cloneElement)(background, {
                 autoPlay: !0,
                 muted: !0,
                 loop: !0,
-                className: "object-cover w-full h-full absolute top-0 left-0 -z-10 rounded-full"
-              })
+                className: "object-cover w-full h-full absolute top-0 left-0 z-0 rounded-full"
+              }),
+              /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "relative z-10 rounded-lg bg-black/50 px-1 text-center font-menu text-xl shadow-lg", children: title }),
+              /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "relative z-10 rounded-lg bg-black/50 px-1 text-center font-menu text-sm text-gray-200 shadow-lg", children: subtitle })
             ]
           },
           route
@@ -749,7 +749,7 @@ function Role2() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-6YBMEKDG.js", imports: ["/build/_shared/chunk-6ZVS2WHG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-3UKMVSCW.js", imports: ["/build/_shared/chunk-UUMDPANW.js", "/build/_shared/chunk-GLCLLSTV.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-VUCFHVTV.js", imports: ["/build/_shared/chunk-VFWGOMYG.js", "/build/_shared/chunk-GC7MKPDH.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-UMLESLJ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-3UVVWNBF.js", imports: ["/build/_shared/chunk-GC7MKPDH.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "d6e169c5", hmr: void 0, url: "/build/manifest-D6E169C5.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-6YBMEKDG.js", imports: ["/build/_shared/chunk-6ZVS2WHG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-7VK22NC4.js", imports: ["/build/_shared/chunk-UUMDPANW.js", "/build/_shared/chunk-GLCLLSTV.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-2PS7AF4R.js", imports: ["/build/_shared/chunk-VFWGOMYG.js", "/build/_shared/chunk-GC7MKPDH.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-UMLESLJ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-3UVVWNBF.js", imports: ["/build/_shared/chunk-GC7MKPDH.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "14633179", hmr: void 0, url: "/build/manifest-14633179.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
