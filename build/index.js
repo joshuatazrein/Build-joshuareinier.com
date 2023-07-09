@@ -126,7 +126,7 @@ __export(root_exports, {
 var import_react3 = require("@remix-run/react");
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-RFSBOYY3.css";
+var tailwind_default = "/build/_assets/tailwind-733FTPEW.css";
 
 // app/components/Tag.tsx
 var import_react2 = require("@remix-run/react"), import_jsx_runtime2 = require("react/jsx-runtime");
@@ -135,7 +135,7 @@ function Tag({
   to,
   keepSearch = !0
 }) {
-  let { search } = (0, import_react2.useLocation)(), className = "inline-block w-fit rounded-full border border-blue-500 px-2 font-menu hover:bg-gray-700 transition-colors duration-300 whitespace-nowrap";
+  let { search } = (0, import_react2.useLocation)(), className = "inline-block w-fit rounded-full border border-blue-500 px-2 font-menu mouse:hover:bg-gray-700 touch:active:bg-gray-700 transition-colors duration-300 whitespace-nowrap my-1";
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_jsx_runtime2.Fragment, { children: typeof to == "string" ? /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.Link, { to: to + (keepSearch ? search : ""), className, children }) : /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("button", { className, onClick: to, children }) });
 }
 
@@ -144,7 +144,7 @@ var import_jsx_runtime3 = require("react/jsx-runtime");
 function Section({
   children
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mx-auto my-8 max-w-4xl space-y-2 px-8 text-center", children });
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mx-auto my-8 max-w-4xl space-y-2 px-8 text-center leading-6", children });
 }
 
 // app/root.tsx
@@ -160,14 +160,7 @@ function App() {
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Links, {})
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("body", { className: "min-h-screen bg-gradient-to-br from-black to-gray-900 px-8 font-sans text-white", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Section, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-        import_react3.Link,
-        {
-          className: "rounded-full border-blue-500/50 px-4 py-1 font-serif text-4xl transition-colors duration-300 hover:border hover:bg-gray-700/50",
-          to: "/",
-          children: "Joshua Tazman Reinier"
-        }
-      ) }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Section, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "rounded-full border-blue-500/50 px-4 py-1 transition-colors duration-300 hover:border hover:bg-gray-700/50", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Link, { className: "font-serif text-4xl", to: "/", children: "Joshua Tazman Reinier" }) }) }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Section, { children: [
         /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
           "is an",
@@ -598,19 +591,19 @@ var import_jsx_runtime9 = require("react/jsx-runtime"), meta = () => [{ title: "
 function Index() {
   return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(Section, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "flex w-full space-x-2", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(ViewButton, { href: "assets/doc/joshua-reinier_resume.pdf", children: "R\xE9sum\xE9" }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(ViewButton, { href: "assets/doc/joshua-reinier_cv.pdf", children: "CV" })
-      ] }),
       /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
         "img",
         {
           src: images.headshot,
-          className: "mx-auto h-[300px] w-[300px] self-center rounded-lg sm:float-right sm:m-4"
+          className: "mx-auto aspect-square w-[300px] self-center rounded-lg sm:float-right sm:m-4"
         }
       ),
       /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-left", children: "His work tightropes the boundary between speech and sound, often taking the form of creative/critical hypertexts, performances, and installations. Inspired by posthumanist ideas, his work challenges anthropocentrism, using technology and multimedia to articulate technological, ghostly ways of being." }),
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-left", children: `Reinier attended Oberlin College and Conservatory, where he studied composition and comparative literature. He received Highest Honors for his undergraduate thesis, "Demons of Analogy: The Encounter Between Music and Language After Mallarm\xE9," which investigates how French Symbolist poet St\xE9phane Mallarm\xE9 theorizes a musical poetics, and how music speaks back at this poetics. He has designed and taught four courses in Oberlin's Experimental College which explore experimental literature and posthumanist philosophies. He currently lives and works in New York City.` })
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-left", children: `Reinier attended Oberlin College and Conservatory, where he studied composition and comparative literature. He received Highest Honors for his undergraduate thesis, "Demons of Analogy: The Encounter Between Music and Language After Mallarm\xE9," which investigates how French Symbolist poet St\xE9phane Mallarm\xE9 theorizes a musical poetics, and how music speaks back at this poetics. He has designed and taught four courses in Oberlin's Experimental College which explore experimental literature and posthumanist philosophies. He currently lives and works in New York City.` }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "flex w-full space-x-2", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(ViewButton, { href: "assets/doc/joshua-reinier_resume.pdf", children: "R\xE9sum\xE9" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(ViewButton, { href: "assets/doc/joshua-reinier_cv.pdf", children: "CV" })
+      ] })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_react6.Outlet, {})
   ] });
@@ -667,7 +660,7 @@ function Role2() {
           {
             "data-matter-label": route,
             to: route + (search && "?" + search),
-            className: ({ isActive }) => "relative flex h-[23vw] w-[23vw] flex-none flex-col items-center justify-center overflow-hidden rounded-full transition-transform duration-500 hover:z-10 hover:scale-125",
+            className: ({ isActive }) => "relative flex aspect-square w-[300px] max-w-full flex-none flex-col items-center justify-center overflow-hidden rounded-full transition-transform duration-500 hover:z-10 hover:scale-125",
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-xl shadow-lg", children: title }),
               /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-sm text-gray-200 shadow-lg", children: subtitle }),
@@ -688,7 +681,7 @@ function Role2() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-6YBMEKDG.js", imports: ["/build/_shared/chunk-6ZVS2WHG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-FRNDYHNG.js", imports: ["/build/_shared/chunk-J5UV56GH.js", "/build/_shared/chunk-67GT7CWQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-T7ZZT3DM.js", imports: ["/build/_shared/chunk-7JHAYJVV.js", "/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-LTNK3JFR.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-UJZRRIVC.js", imports: ["/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "3651985e", hmr: void 0, url: "/build/manifest-3651985E.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-6YBMEKDG.js", imports: ["/build/_shared/chunk-6ZVS2WHG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-3UKMVSCW.js", imports: ["/build/_shared/chunk-UUMDPANW.js", "/build/_shared/chunk-GLCLLSTV.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-V35WJ5KG.js", imports: ["/build/_shared/chunk-7JHAYJVV.js", "/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-LTNK3JFR.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-UEYVSA5Y.js", imports: ["/build/_shared/chunk-R2T6WWYE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "d8fdf1ef", hmr: void 0, url: "/build/manifest-D8FDF1EF.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
