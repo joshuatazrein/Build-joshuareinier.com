@@ -126,7 +126,7 @@ __export(root_exports, {
 var import_react3 = require("@remix-run/react");
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-F4VVFFLH.css";
+var tailwind_default = "/build/_assets/tailwind-XF6CYMCP.css";
 
 // app/components/Tag.tsx
 var import_react2 = require("@remix-run/react"), import_jsx_runtime2 = require("react/jsx-runtime");
@@ -753,7 +753,7 @@ function WorksDisplayClient({ works: works2 }) {
   }, [work]), /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
     "div",
     {
-      className: "mx-auto grid w-fit",
+      className: "mx-auto grid w-fit max-w-[1000px]",
       style: {
         gridTemplateColumns: `repeat(${width}, minmax(0, 1fr))`
       },
@@ -762,7 +762,7 @@ function WorksDisplayClient({ works: works2 }) {
         import_web.animated.div,
         {
           "data-spring": route,
-          className: "relative flex aspect-square max-w-[100%] flex-none overflow-hidden rounded-full shadow-lg transition-transform duration-500 hover:z-10 hover:scale-125",
+          className: "relative flex aspect-square max-w-[100%] flex-none overflow-hidden rounded-full bg-gradient-to-br from-slate-600 to-slate-800 shadow-lg transition-transform duration-500 hover:z-10 hover:scale-125",
           style: {
             left: springs[i].x,
             top: springs[i].y,
@@ -913,7 +913,7 @@ function Role4() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-KEU5RIBI.js", imports: ["/build/_shared/chunk-VQ5MKUXG.js", "/build/_shared/chunk-5JZIGVC6.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KUY2ITRF.js", imports: ["/build/_shared/chunk-D77U3XML.js", "/build/_shared/chunk-H5ISSZRX.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-WAOI6CIW.js", imports: ["/build/_shared/chunk-R3LC7OB3.js", "/build/_shared/chunk-FNWTSBUY.js", "/build/_shared/chunk-7JCAHKZP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-UFZZZOBS.js", imports: ["/build/_shared/chunk-QI7LH35J.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-457G4YXM.js", imports: ["/build/_shared/chunk-7JCAHKZP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college": { id: "routes/portfolio.brooklyn-college", parentId: "root", path: "portfolio/brooklyn-college", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college-KGBJOULF.js", imports: ["/build/_shared/chunk-R3LC7OB3.js", "/build/_shared/chunk-FNWTSBUY.js", "/build/_shared/chunk-7JCAHKZP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college.$work": { id: "routes/portfolio.brooklyn-college.$work", parentId: "routes/portfolio.brooklyn-college", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college.$work-CPLMGOW6.js", imports: ["/build/_shared/chunk-QI7LH35J.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "c6a16e14", hmr: void 0, url: "/build/manifest-C6A16E14.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-KEU5RIBI.js", imports: ["/build/_shared/chunk-VQ5MKUXG.js", "/build/_shared/chunk-5JZIGVC6.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-RTIOWZBO.js", imports: ["/build/_shared/chunk-D77U3XML.js", "/build/_shared/chunk-H5ISSZRX.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-N3NQDYR5.js", imports: ["/build/_shared/chunk-OLR7WNNF.js", "/build/_shared/chunk-FNWTSBUY.js", "/build/_shared/chunk-7JCAHKZP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-UFZZZOBS.js", imports: ["/build/_shared/chunk-QI7LH35J.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-457G4YXM.js", imports: ["/build/_shared/chunk-7JCAHKZP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college": { id: "routes/portfolio.brooklyn-college", parentId: "root", path: "portfolio/brooklyn-college", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college-HHYRRJY3.js", imports: ["/build/_shared/chunk-OLR7WNNF.js", "/build/_shared/chunk-FNWTSBUY.js", "/build/_shared/chunk-7JCAHKZP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college.$work": { id: "routes/portfolio.brooklyn-college.$work", parentId: "routes/portfolio.brooklyn-college", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college.$work-CPLMGOW6.js", imports: ["/build/_shared/chunk-QI7LH35J.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "a6071984", hmr: void 0, url: "/build/manifest-A6071984.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
