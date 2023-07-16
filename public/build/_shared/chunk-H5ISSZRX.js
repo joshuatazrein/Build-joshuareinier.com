@@ -1,0 +1,1 @@
+import{b as e,o as n}from"/build/_shared/chunk-5JZIGVC6.js";var t=e(n());function i({children:l}){return(0,t.jsx)("div",{className:"mx-auto my-2 max-w-4xl flex-none space-y-2 px-8 text-center leading-6",children:l})}export{i as a};

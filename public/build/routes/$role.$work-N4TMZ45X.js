@@ -1,0 +1,1 @@
+import{a}from"/build/_shared/chunk-5SZ5HJD7.js";import{a as m,b as n}from"/build/_shared/chunk-43YUZQMT.js";import"/build/_shared/chunk-7JCAHKZP.js";import{b as t,d as s,e,o as i}from"/build/_shared/chunk-5JZIGVC6.js";var f=t(i());function k(){let{role:o,work:l}=e(),{search:p}=s(),r=n[o].find(c=>c.route===l);return m(r),(0,f.jsx)(a,{work:r,to:`/${o}${p}`})}export{k as default};

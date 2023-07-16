@@ -126,7 +126,7 @@ __export(root_exports, {
 var import_react3 = require("@remix-run/react");
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-VSQ55NTA.css";
+var tailwind_default = "/build/_assets/tailwind-F4VVFFLH.css";
 
 // app/components/Tag.tsx
 var import_react2 = require("@remix-run/react"), import_jsx_runtime2 = require("react/jsx-runtime");
@@ -144,14 +144,15 @@ var import_jsx_runtime3 = require("react/jsx-runtime");
 function Section({
   children
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mx-auto my-8 max-w-4xl space-y-2 px-8 text-center leading-6", children });
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mx-auto my-2 max-w-4xl flex-none space-y-2 px-8 text-center leading-6", children });
 }
 
 // app/root.tsx
 var import_jsx_runtime4 = require("react/jsx-runtime"), links = () => [
   { rel: "stylesheet", href: tailwind_default }
-];
+], subSites = /^\/(portfolio)/;
 function App() {
+  let location = (0, import_react3.useLocation)(), noRoot = subSites.test(location.pathname);
   return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("html", { lang: "en", children: [
     /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("head", { children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("meta", { charSet: "utf-8" }),
@@ -159,36 +160,43 @@ function App() {
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Meta, {}),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Links, {})
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("body", { className: "min-h-screen bg-gradient-to-br from-black to-gray-900 px-8 font-sans text-white", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Section, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "rounded-full border-blue-500/50 px-4 py-1 transition-colors duration-300 hover:border hover:bg-gray-700/50", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Link, { className: "font-serif text-4xl", to: "/", children: "Joshua Tazman Reinier" }) }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Section, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
-          "is an",
-          " ",
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Tag, { to: "artist", keepSearch: !1, children: "artist" }),
-          " ",
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Tag, { to: "researcher", keepSearch: !1, children: "researcher" }),
-          " ",
-          "and",
-          " ",
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Tag, { to: "designer", keepSearch: !1, children: "designer" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { children: "exploring the connections between language, noise, and technology." })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Outlet, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.ScrollRestoration, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Scripts, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.LiveReload, {})
-    ] })
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(
+      "body",
+      {
+        className: "min-h-screen bg-gradient-to-br from-black to-gray-900 font-sans text-white",
+        children: [
+          noRoot ? null : /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Section, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "rounded-full border-blue-500/50 px-4 py-1 transition-colors duration-300 hover:border hover:bg-gray-700/50", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Link, { className: "font-serif text-4xl", to: "/", children: "Joshua Tazman Reinier" }) }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Section, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+              "is an",
+              " ",
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Tag, { to: "artist", keepSearch: !1, children: "artist" }),
+              " ",
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Tag, { to: "researcher", keepSearch: !1, children: "researcher" }),
+              " ",
+              "and",
+              " ",
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Tag, { to: "designer", keepSearch: !1, children: "designer" }),
+              " ",
+              "exploring the connections between language, noise, and technology."
+            ] }) })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Outlet, {}),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.ScrollRestoration, {}),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.Scripts, {}),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_react3.LiveReload, {})
+        ]
+      }
+    )
   ] });
 }
 
-// app/routes/$role.$work.tsx
-var role_work_exports = {};
-__export(role_work_exports, {
+// app/routes/portfolio.brooklyn-college.$work.tsx
+var portfolio_brooklyn_college_work_exports = {};
+__export(portfolio_brooklyn_college_work_exports, {
   default: () => Works
 });
-var import_react4 = require("@remix-run/react"), import_tiny_invariant = __toESM(require("tiny-invariant"));
+var import_react6 = require("@remix-run/react"), import_tiny_invariant = __toESM(require("tiny-invariant"));
 
 // app/assets/vid/what-ive-done_cover.webm
 var what_ive_done_cover_default = "/build/_assets/what-ive-done_cover-UIUZJZJN.webm";
@@ -350,7 +358,7 @@ function ViewButton({
   href,
   children
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("a", { href, target: "_blank", className: "block w-full", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("button", { className: "w-full flex justify-center border border-accent-light rounded-lg hover:bg-accent-light hover:border-accent-dark font-bold transition-colors duration-300 my-2", children }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("a", { href, target: "_blank", className: "block w-full", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("button", { className: "hover:bg-accent-light hover:border-accent-dark my-2 flex w-full justify-center rounded-lg bg-slate-800/50 py-1 font-bold transition-colors duration-300 hover:bg-slate-800/75", children }) });
 }
 
 // app/models/works.tsx
@@ -399,7 +407,7 @@ var import_jsx_runtime7 = require("react/jsx-runtime"), works = {
         "iframe",
         {
           className: "aspect-video w-full",
-          src: "https://www.youtube.com/embed/6SPKB028M18",
+          src: "https://www.youtube.com/embed/mI9meISxHnQ",
           title: "Unfolding",
           allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
           allowFullScreen: !0
@@ -412,17 +420,20 @@ var import_jsx_runtime7 = require("react/jsx-runtime"), works = {
       route: "what-ive-done",
       filter: "performance",
       subtitle: "jazz band & meta-monologue",
-      content: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
-        "iframe",
-        {
-          width: "100%",
-          className: "aspect-video",
-          src: "https://www.youtube.com/embed/lnE9lyYIAZg",
-          title: "What I've Done",
-          allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
-          allowFullScreen: !0
-        }
-      ),
+      content: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(import_jsx_runtime7.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+          "iframe",
+          {
+            width: "100%",
+            className: "aspect-video",
+            src: "https://www.youtube.com/embed/lnE9lyYIAZg",
+            title: "What I've Done",
+            allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+            allowFullScreen: !0
+          }
+        ),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "px-8", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(PDF, { src: "/assets/doc/what-ive-done.pdf" }) })
+      ] }),
       description: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(import_jsx_runtime7.Fragment, { children: [
         /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("p", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("i", { children: "What I've Done" }),
@@ -623,29 +634,207 @@ var import_jsx_runtime7 = require("react/jsx-runtime"), works = {
   ]
 };
 
-// app/routes/$role.$work.tsx
-var import_react5 = require("react"), import_jsx_runtime8 = require("react/jsx-runtime");
-function Works() {
-  let { role, work: route } = (0, import_react4.useParams)(), { search } = (0, import_react4.useLocation)(), thisWork = works[role].find((work) => work.route === route);
-  return (0, import_tiny_invariant.default)(thisWork), /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center overflow-y-auto bg-black/50 p-8 backdrop-blur-sm", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
-      import_react4.Link,
-      {
-        to: `/${role}` + search,
-        className: "absolute left-0 top-0 -z-10 h-full w-full opacity-50",
-        children: (0, import_react5.cloneElement)(thisWork.background, {
-          muted: !0,
-          className: "object-cover w-full h-full absolute top-0 left-0 -z-10"
-        })
-      }
-    ),
+// app/components/WorkDisplay.tsx
+var import_react4 = require("@remix-run/react"), import_react5 = require("react"), import_jsx_runtime8 = require("react/jsx-runtime");
+function WorkDisplay({
+  work,
+  to
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center bg-black/50 p-8 backdrop-blur-sm", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(import_react4.Link, { to, className: "absolute left-0 top-0 -z-10 h-full w-full", children: (0, import_react5.cloneElement)(work.background, {
+      muted: !0,
+      className: "object-cover w-full h-full absolute top-0 left-0 -z-10"
+    }) }),
     /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "relative max-h-full max-w-4xl cursor-default overflow-y-auto rounded-lg border border-gray-400 bg-black/20 p-4 backdrop-blur-lg", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "sticky top-4 z-10 mb-8 text-center text-2xl font-bold drop-shadow-text", children: thisWork.title }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "text-center", children: thisWork.subtitle }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "my-4", children: thisWork.content }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "my-4 space-y-4 text-base", children: thisWork.description })
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "sticky top-4 z-10 mb-8 text-center text-2xl font-bold drop-shadow-text", children: work.title }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "text-center", children: work.subtitle }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "my-4", children: work.content }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "my-4 space-y-4 text-base", children: work.description })
     ] })
   ] });
+}
+
+// app/routes/portfolio.brooklyn-college.$work.tsx
+var import_jsx_runtime9 = require("react/jsx-runtime");
+function Works() {
+  let { work: route } = (0, import_react6.useParams)(), thisWork = works.artist.find((work) => work.route === route);
+  return (0, import_tiny_invariant.default)(thisWork), /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(WorkDisplay, { work: thisWork, to: "/portfolio/brooklyn-college" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_react6.Outlet, {})
+  ] });
+}
+
+// app/routes/portfolio.brooklyn-college.tsx
+var portfolio_brooklyn_college_exports = {};
+__export(portfolio_brooklyn_college_exports, {
+  default: () => BrooklynCollege
+});
+var import_react10 = require("@remix-run/react");
+
+// app/components/WorksDisplay.tsx
+var import_web = require("@react-spring/web"), import_react8 = require("@remix-run/react"), import_lodash2 = __toESM(require("lodash")), import_matter_js = require("matter-js"), import_react9 = require("react");
+
+// app/util/hooks.ts
+var import_lodash = __toESM(require("lodash")), import_react7 = require("react");
+var useDimensions = () => {
+  let [{ w, h }, setDimensions] = (0, import_react7.useState)({
+    w: window.innerWidth,
+    h: window.innerHeight
+  });
+  return (0, import_react7.useEffect)(() => {
+    let updateSize = () => setDimensions({ w: window.innerWidth, h: window.innerHeight });
+    return window.addEventListener("resize", updateSize), () => window.removeEventListener("resize", updateSize);
+  }, []), { w, h };
+}, useMousePosition = () => {
+  let [mousePos, setMousePos] = (0, import_react7.useState)([0, 0]), ready = (0, import_react7.useRef)(!0);
+  return (0, import_react7.useEffect)(() => {
+    let updateMousePos = (ev) => {
+      ready.current && (ready.current = !1, requestAnimationFrame(() => {
+        ready.current = !0;
+      }), setMousePos([ev.clientX, ev.clientY]));
+    };
+    return window.addEventListener("mousemove", updateMousePos), () => window.removeEventListener("mousemove", updateMousePos);
+  }), mousePos;
+}, lerp = (a, b, progress, config = { clamp: !0 }) => {
+  let value = a + (b - a) * progress;
+  return config.clamp ? import_lodash.default.clamp(value, ...[a, b].sort()) : value;
+};
+
+// app/components/WorksDisplay.tsx
+var import_jsx_runtime10 = require("react/jsx-runtime");
+function WorksDisplay({ works: works2 }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react9.Suspense, { fallback: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_jsx_runtime10.Fragment, {}), children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(WorksDisplayClient, { works: works2 }) });
+}
+function WorksDisplayClient({ works: works2 }) {
+  let [search, setSearch] = (0, import_react8.useSearchParams)(), { work } = (0, import_react8.useParams)(), frame = (0, import_react9.useRef)(null), itemWidth = 300, margin = 24, [width, setWidth] = (0, import_react9.useState)(0);
+  (0, import_react9.useEffect)(() => {
+    let computeResize = () => {
+      let newWidth = Math.min(
+        works2.length,
+        Math.floor((window.innerWidth - itemWidth) / (itemWidth + margin))
+      );
+      width !== newWidth && setWidth(newWidth);
+    };
+    return window.addEventListener("resize", computeResize), computeResize(), () => {
+      window.removeEventListener("resize", computeResize);
+    };
+  }, [works2]);
+  let mousePosition = useMousePosition(), { w, h } = useDimensions(), [springs, api] = (0, import_web.useSprings)(
+    works2.length,
+    (i) => {
+      var _a;
+      let position = (_a = document.querySelector(`[data-spring=${works2[i].route}]`)) == null ? void 0 : _a.getBoundingClientRect();
+      if (!position)
+        return {};
+      let positionVector = import_matter_js.Vector.create(position.x, position.y), toMouse = import_matter_js.Vector.sub(
+        positionVector,
+        import_matter_js.Vector.create(...mousePosition)
+      ), rowNumber = Math.floor(i / width);
+      return {
+        from: import_matter_js.Vector.create(0, 0),
+        to: import_matter_js.Vector.add(
+          import_matter_js.Vector.create(rowNumber % 2 ? itemWidth / 4 : -itemWidth / 4, 0),
+          import_matter_js.Vector.mult(
+            import_matter_js.Vector.normalise(toMouse),
+            lerp(20, 0, import_matter_js.Vector.magnitude(toMouse) / w, { clamp: !0 })
+          )
+        ),
+        config: {
+          damping: 500,
+          friction: 10 * import_lodash2.default.random(0.9, 1.1),
+          tension: 250 * import_lodash2.default.random(0.8, 1.2)
+        }
+      };
+    },
+    [mousePosition]
+  ), lastScroll = (0, import_react9.useRef)(0);
+  return (0, import_react9.useEffect)(() => {
+    work || window.scrollTo({ top: lastScroll.current });
+  }, [work]), /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+    "div",
+    {
+      className: "mx-auto grid w-fit",
+      style: {
+        gridTemplateColumns: `repeat(${width}, minmax(0, 1fr))`
+      },
+      ref: frame,
+      children: works2.map(({ title, subtitle, route, background }, i) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
+        import_web.animated.div,
+        {
+          "data-spring": route,
+          className: "relative flex aspect-square max-w-[100%] flex-none overflow-hidden rounded-full shadow-lg transition-transform duration-500 hover:z-10 hover:scale-125",
+          style: {
+            left: springs[i].x,
+            top: springs[i].y,
+            width: itemWidth,
+            margin: `${margin / 2}px ${margin}px`
+          },
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
+              import_react8.Link,
+              {
+                className: "flex h-full w-full flex-col items-center justify-center",
+                to: route + (search && "?" + search),
+                onMouseDown: () => {
+                  lastScroll.current = window.scrollY;
+                },
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-xl shadow-lg", children: title }),
+                  /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-sm text-gray-200 shadow-lg", children: subtitle })
+                ]
+              }
+            ),
+            (0, import_react9.cloneElement)(background, {
+              autoPlay: !0,
+              muted: !0,
+              loop: !0,
+              className: "object-cover w-full h-full absolute top-0 left-0 -z-10 rounded-full"
+            })
+          ]
+        },
+        route
+      ))
+    }
+  );
+}
+
+// app/routes/portfolio.brooklyn-college.tsx
+var import_jsx_runtime11 = require("react/jsx-runtime");
+function BrooklynCollege() {
+  let [search, _setSearch] = (0, import_react10.useSearchParams)(), thisWorks = works.artist;
+  return /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(import_jsx_runtime11.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "w-screen items-center p-4", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex w-full items-center justify-center space-x-8", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
+        "img",
+        {
+          src: images.headshot,
+          className: "aspect-square w-[150px] rounded-full"
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "max-w-lg grow", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h1", { className: "text-4xl font-bold", children: "Joshua Tazman Reinier" }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "italic", children: "Portfolio: Brooklyn College, Performance & Interactive Media Arts" }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "md:flex md:space-x-2 -md:space-y-2", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(ViewButton, { href: "/assets/doc/brooklyn-college_resume.pdf", children: "R\xE9sum\xE9" }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(ViewButton, { href: "/assets/doc/brooklyn-college_personal-statement.pdf", children: "Personal Statement" })
+        ] })
+      ] })
+    ] }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(WorksDisplay, { works: thisWorks }),
+    /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_react10.Outlet, {})
+  ] });
+}
+
+// app/routes/$role.$work.tsx
+var role_work_exports = {};
+__export(role_work_exports, {
+  default: () => Works2
+});
+var import_react11 = require("@remix-run/react"), import_tiny_invariant2 = __toESM(require("tiny-invariant"));
+var import_jsx_runtime12 = require("react/jsx-runtime");
+function Works2() {
+  let { role, work: route } = (0, import_react11.useParams)(), { search } = (0, import_react11.useLocation)(), thisWork = works[role].find((work) => work.route === route);
+  return (0, import_tiny_invariant2.default)(thisWork), /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(WorkDisplay, { work: thisWork, to: `/${role}${search}` });
 }
 
 // app/routes/_index.tsx
@@ -654,102 +843,77 @@ __export(index_exports, {
   default: () => Index,
   meta: () => meta
 });
-var import_react6 = require("@remix-run/react");
-var import_jsx_runtime9 = require("react/jsx-runtime"), meta = () => [{ title: "Home" }];
+var import_react12 = require("@remix-run/react");
+var import_jsx_runtime13 = require("react/jsx-runtime"), meta = () => [{ title: "Home" }];
 function Index() {
-  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(Section, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(import_jsx_runtime13.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(Section, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
         "img",
         {
           src: images.headshot,
           className: "mx-auto aspect-square w-[300px] self-center rounded-lg sm:float-right sm:m-4"
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-left", children: "His work tightropes the boundary between speech and sound, often taking the form of creative/critical hypertexts, performances, and installations. Inspired by posthumanist ideas, his work challenges anthropocentrism, using technology and multimedia to articulate technological, ghostly ways of being." }),
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-left", children: `Reinier attended Oberlin College and Conservatory, where he studied composition and comparative literature. He received Highest Honors for his undergraduate thesis, "Demons of Analogy: The Encounter Between Music and Language After Mallarm\xE9," which investigates how French Symbolist poet St\xE9phane Mallarm\xE9 theorizes a musical poetics, and how music speaks back at this poetics. He has designed and taught four courses in Oberlin's Experimental College which explore experimental literature and posthumanist philosophies. He currently lives and works in New York City.` }),
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "flex w-full space-x-2", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(ViewButton, { href: "assets/doc/joshua-reinier_resume.pdf", children: "R\xE9sum\xE9" }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(ViewButton, { href: "assets/doc/joshua-reinier_cv.pdf", children: "CV" })
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { className: "text-left", children: "His work tightropes the boundary between speech and sound, often taking the form of creative/critical hypertexts, performances, and installations. Inspired by posthumanist ideas, his work challenges anthropocentrism, using technology and multimedia to articulate technological, ghostly ways of being." }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { className: "text-left", children: `Reinier attended Oberlin College and Conservatory, where he studied composition and comparative literature. He received Highest Honors for his undergraduate thesis, "Demons of Analogy: The Encounter Between Music and Language After Mallarm\xE9," which investigates how French Symbolist poet St\xE9phane Mallarm\xE9 theorizes a musical poetics, and how music speaks back at this poetics. He has designed and taught four courses in Oberlin's Experimental College which explore experimental literature and posthumanist philosophies. He currently lives and works in New York City.` }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "flex w-full space-x-2", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(ViewButton, { href: "assets/doc/joshua-reinier_resume.pdf", children: "R\xE9sum\xE9" }),
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(ViewButton, { href: "assets/doc/joshua-reinier_cv.pdf", children: "CV" })
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_react6.Outlet, {})
+    /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(import_react12.Outlet, {})
   ] });
 }
 
 // app/routes/$role.tsx
 var role_exports = {};
 __export(role_exports, {
-  default: () => Role2
+  default: () => Role4
 });
-var import_react7 = require("@remix-run/react"), import_react8 = require("react");
-var import_jsx_runtime10 = require("react/jsx-runtime");
-function Role2() {
-  let role = (0, import_react7.useParams)().role, [search, setSearch] = (0, import_react7.useSearchParams)(), filter = search.get("filter"), setFilter = (newFilter) => {
+var import_react13 = require("@remix-run/react"), import_react14 = require("react");
+var import_jsx_runtime14 = require("react/jsx-runtime");
+function Role4() {
+  let role = (0, import_react13.useParams)().role, [search, setSearch] = (0, import_react13.useSearchParams)(), filter = search.get("filter"), setFilter = (newFilter) => {
     search.set("filter", newFilter), setSearch(search);
-  }, frame = (0, import_react8.useRef)(null), sections = {
-    artist: () => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_jsx_runtime10.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { children: [
+  }, frame = (0, import_react14.useRef)(null), sections = {
+    artist: () => /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(import_jsx_runtime14.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { children: [
       "My creative work encompasses",
       " ",
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("hypertext"), children: "hypertext" }),
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Tag, { to: () => setFilter("hypertext"), children: "hypertext" }),
       " and",
       " ",
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("performance"), children: "performance" }),
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Tag, { to: () => setFilter("performance"), children: "performance" }),
       ", deconstructing speech and writing by placing it in multimedia, coded ecosystems."
     ] }) }),
-    researcher: () => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_jsx_runtime10.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { children: [
+    researcher: () => /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(import_jsx_runtime14.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { children: [
       "My ",
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("teaching"), children: "teaching" }),
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Tag, { to: () => setFilter("teaching"), children: "teaching" }),
       " and",
       " ",
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("writing"), children: "writing" }),
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Tag, { to: () => setFilter("writing"), children: "writing" }),
       " is informed by posthumanism and deconstruction, investigating technology and intermediality to find new approaches to the human."
     ] }) }),
-    designer: () => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    designer: () => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)(import_jsx_runtime14.Fragment, { children: [
       "As a ",
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("web"), children: "web" }),
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Tag, { to: () => setFilter("web"), children: "web" }),
       " and",
       " ",
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Tag, { to: () => setFilter("multimedia"), children: "multimedia" }),
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Tag, { to: () => setFilter("multimedia"), children: "multimedia" }),
       " designer, I create tools for thought and innovative platforms for communication."
     ] })
   }, thisWorks = works[role].filter(
     (work) => !filter || work.filter === filter
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { children: sections[role]() }),
-    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
-      "div",
-      {
-        className: "scrollbar-none flex w-full flex-wrap justify-around space-x-2 space-y-2",
-        ref: frame,
-        children: thisWorks.map(({ title, subtitle, route, background }) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
-          import_react7.NavLink,
-          {
-            "data-matter-label": route,
-            to: route + (search && "?" + search),
-            className: ({ isActive }) => "relative flex aspect-square w-[300px] max-w-full flex-none flex-col items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-slate-800 to-slate-900 transition-transform duration-500 hover:z-10 hover:scale-125",
-            children: [
-              (0, import_react8.cloneElement)(background, {
-                autoPlay: !0,
-                muted: !0,
-                loop: !0,
-                className: "object-cover w-full h-full absolute top-0 left-0 z-0 rounded-full"
-              }),
-              /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "relative z-10 rounded-lg bg-black/50 px-1 text-center font-menu text-xl shadow-lg", children: title }),
-              /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "relative z-10 rounded-lg bg-black/50 px-1 text-center font-menu text-sm text-gray-200 shadow-lg", children: subtitle })
-            ]
-          },
-          route
-        ))
-      }
-    ),
-    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react7.Outlet, {})
+  return /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)(import_jsx_runtime14.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Section, { children: sections[role]() }),
+    /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(WorksDisplay, { works: thisWorks }),
+    /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(import_react13.Outlet, {})
   ] });
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-6YBMEKDG.js", imports: ["/build/_shared/chunk-6ZVS2WHG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-7VK22NC4.js", imports: ["/build/_shared/chunk-UUMDPANW.js", "/build/_shared/chunk-GLCLLSTV.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-2PS7AF4R.js", imports: ["/build/_shared/chunk-VFWGOMYG.js", "/build/_shared/chunk-GC7MKPDH.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-UMLESLJ7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-3UVVWNBF.js", imports: ["/build/_shared/chunk-GC7MKPDH.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "14633179", hmr: void 0, url: "/build/manifest-14633179.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-KEU5RIBI.js", imports: ["/build/_shared/chunk-VQ5MKUXG.js", "/build/_shared/chunk-5JZIGVC6.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KUY2ITRF.js", imports: ["/build/_shared/chunk-D77U3XML.js", "/build/_shared/chunk-H5ISSZRX.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-WAOI6CIW.js", imports: ["/build/_shared/chunk-R3LC7OB3.js", "/build/_shared/chunk-FNWTSBUY.js", "/build/_shared/chunk-7JCAHKZP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-UFZZZOBS.js", imports: ["/build/_shared/chunk-QI7LH35J.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-457G4YXM.js", imports: ["/build/_shared/chunk-7JCAHKZP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college": { id: "routes/portfolio.brooklyn-college", parentId: "root", path: "portfolio/brooklyn-college", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college-KGBJOULF.js", imports: ["/build/_shared/chunk-R3LC7OB3.js", "/build/_shared/chunk-FNWTSBUY.js", "/build/_shared/chunk-7JCAHKZP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college.$work": { id: "routes/portfolio.brooklyn-college.$work", parentId: "routes/portfolio.brooklyn-college", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college.$work-CPLMGOW6.js", imports: ["/build/_shared/chunk-QI7LH35J.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "c6a16e14", hmr: void 0, url: "/build/manifest-C6A16E14.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -760,6 +924,22 @@ var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postc
     index: void 0,
     caseSensitive: void 0,
     module: root_exports
+  },
+  "routes/portfolio.brooklyn-college.$work": {
+    id: "routes/portfolio.brooklyn-college.$work",
+    parentId: "routes/portfolio.brooklyn-college",
+    path: ":work",
+    index: void 0,
+    caseSensitive: void 0,
+    module: portfolio_brooklyn_college_work_exports
+  },
+  "routes/portfolio.brooklyn-college": {
+    id: "routes/portfolio.brooklyn-college",
+    parentId: "root",
+    path: "portfolio/brooklyn-college",
+    index: void 0,
+    caseSensitive: void 0,
+    module: portfolio_brooklyn_college_exports
   },
   "routes/$role.$work": {
     id: "routes/$role.$work",
