@@ -672,7 +672,7 @@ __export(portfolio_brooklyn_college_exports, {
 var import_react10 = require("@remix-run/react");
 
 // app/components/WorksDisplay.tsx
-var import_web = require("@react-spring/web"), import_react8 = require("@remix-run/react"), import_lodash2 = __toESM(require("lodash")), import_matter_js = require("matter-js"), import_react9 = require("react");
+var import_web = require("@react-spring/web"), import_react8 = require("@remix-run/react"), import_lodash2 = __toESM(require("lodash")), import_matter_js = require("matter-js"), import_react9 = require("react"), import_remix_utils = require("remix-utils");
 
 // app/util/hooks.ts
 var import_lodash = __toESM(require("lodash")), import_react7 = require("react");
@@ -702,12 +702,18 @@ var useDimensions = () => {
 
 // app/components/WorksDisplay.tsx
 var import_jsx_runtime10 = require("react/jsx-runtime");
-function WorksDisplay({ works: works2 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react9.Suspense, { fallback: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_jsx_runtime10.Fragment, {}), children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(WorksDisplayClient, { works: works2 }) });
+function WorksDisplay(props) {
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_remix_utils.ClientOnly, { fallback: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_jsx_runtime10.Fragment, {}), children: () => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(WorksDisplayClient, { ...props }) });
 }
 function WorksDisplayClient({ works: works2 }) {
-  let [search, setSearch] = (0, import_react8.useSearchParams)(), { work } = (0, import_react8.useParams)(), frame = (0, import_react9.useRef)(null), itemWidth = 300, margin = 24, [width, setWidth] = (0, import_react9.useState)(0);
-  (0, import_react9.useEffect)(() => {
+  let [search, setSearch] = (0, import_react8.useSearchParams)(), { work } = (0, import_react8.useParams)(), frame = (0, import_react9.useRef)(null), itemWidth = 300, margin = 24, [width, setWidth] = (0, import_react9.useState)(0), isTrapezoidal = works2.length > width && works2.length % width === 0;
+  console.log(
+    "trapezoid",
+    isTrapezoidal,
+    width,
+    works2.length,
+    works2.length % width
+  ), (0, import_react9.useEffect)(() => {
     let computeResize = () => {
       let newWidth = Math.min(
         works2.length,
@@ -757,47 +763,54 @@ function WorksDisplayClient({ works: works2 }) {
   }, [work]), !work && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
     "div",
     {
-      className: "mx-auto grid w-fit max-w-[1000px]",
-      style: {
-        gridTemplateColumns: `repeat(${width}, minmax(0, 1fr))`
-      },
-      ref: frame,
-      children: works2.map(({ title, subtitle, route, background }, i) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
-        import_web.animated.div,
+      className: "w-full",
+      style: { marginLeft: isTrapezoidal ? 0 : itemWidth / 4 },
+      children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+        "div",
         {
-          "data-spring": route,
-          className: "relative flex aspect-square flex-none overflow-hidden rounded-full bg-gradient-to-br from-slate-600 to-slate-800 shadow-lg transition-transform duration-500 hover:z-10 hover:scale-125",
+          className: "mx-auto grid w-fit max-w-[1000px]",
           style: {
-            left: springs[i].x,
-            top: springs[i].y,
-            width: itemWidth,
-            margin: `${margin / 2}px ${margin}px`
+            gridTemplateColumns: `repeat(${width}, minmax(0, 1fr))`
           },
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
-              import_react8.Link,
-              {
-                className: "relative z-10 flex h-full w-full flex-col items-center justify-center",
-                to: route + (search && "?" + search),
-                onMouseDown: () => {
-                  lastScroll.current = window.scrollY;
-                },
-                children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-xl shadow-lg", children: title }),
-                  /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-sm text-gray-200 shadow-lg", children: subtitle })
-                ]
-              }
-            ),
-            (0, import_react9.cloneElement)(background, {
-              autoPlay: !0,
-              muted: !0,
-              loop: !0,
-              className: "object-cover w-full h-full absolute top-0 left-0 rounded-full"
-            })
-          ]
-        },
-        route
-      ))
+          ref: frame,
+          children: works2.map(({ title, subtitle, route, background }, i) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
+            import_web.animated.div,
+            {
+              "data-spring": route,
+              className: "relative flex aspect-square flex-none overflow-hidden rounded-full bg-gradient-to-br from-slate-600 to-slate-800 shadow-lg transition-transform duration-500 hover:z-10 hover:scale-125",
+              style: {
+                left: springs[i].x,
+                top: springs[i].y,
+                width: itemWidth,
+                margin: `${margin / 2}px ${margin}px`
+              },
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
+                  import_react8.Link,
+                  {
+                    className: "relative z-10 flex h-full w-full flex-col items-center justify-center",
+                    to: route + (search && "?" + search),
+                    onMouseDown: () => {
+                      lastScroll.current = window.scrollY;
+                    },
+                    children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-xl shadow-lg", children: title }),
+                      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-lg bg-black/50 px-1 text-center font-menu text-sm text-gray-200 shadow-lg", children: subtitle })
+                    ]
+                  }
+                ),
+                (0, import_react9.cloneElement)(background, {
+                  autoPlay: !0,
+                  muted: !0,
+                  loop: !0,
+                  className: "object-cover w-full h-full absolute top-0 left-0 rounded-full"
+                })
+              ]
+            },
+            route
+          ))
+        }
+      )
     }
   );
 }
@@ -917,7 +930,7 @@ function Role4() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-KEU5RIBI.js", imports: ["/build/_shared/chunk-VQ5MKUXG.js", "/build/_shared/chunk-5JZIGVC6.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KMIHDFUK.js", imports: ["/build/_shared/chunk-D77U3XML.js", "/build/_shared/chunk-H5ISSZRX.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-56NE3Y5Z.js", imports: ["/build/_shared/chunk-6ZPKLO5Y.js", "/build/_shared/chunk-CSYDS45Q.js", "/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-6Y6THVOD.js", imports: ["/build/_shared/chunk-FHYP7OUQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XNS3FEZ4.js", imports: ["/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college": { id: "routes/portfolio.brooklyn-college", parentId: "root", path: "portfolio/brooklyn-college", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college-AAGHE5VT.js", imports: ["/build/_shared/chunk-6ZPKLO5Y.js", "/build/_shared/chunk-CSYDS45Q.js", "/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college.$work": { id: "routes/portfolio.brooklyn-college.$work", parentId: "routes/portfolio.brooklyn-college", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college.$work-WIQAJRB3.js", imports: ["/build/_shared/chunk-FHYP7OUQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "5e5e417b", hmr: void 0, url: "/build/manifest-5E5E417B.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-KEU5RIBI.js", imports: ["/build/_shared/chunk-VQ5MKUXG.js", "/build/_shared/chunk-5JZIGVC6.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KMIHDFUK.js", imports: ["/build/_shared/chunk-D77U3XML.js", "/build/_shared/chunk-H5ISSZRX.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-OSCE5APV.js", imports: ["/build/_shared/chunk-XTYPOE4B.js", "/build/_shared/chunk-CSYDS45Q.js", "/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-6Y6THVOD.js", imports: ["/build/_shared/chunk-FHYP7OUQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XNS3FEZ4.js", imports: ["/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college": { id: "routes/portfolio.brooklyn-college", parentId: "root", path: "portfolio/brooklyn-college", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college-I6OGBFR7.js", imports: ["/build/_shared/chunk-XTYPOE4B.js", "/build/_shared/chunk-CSYDS45Q.js", "/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college.$work": { id: "routes/portfolio.brooklyn-college.$work", parentId: "routes/portfolio.brooklyn-college", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college.$work-WIQAJRB3.js", imports: ["/build/_shared/chunk-FHYP7OUQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "6f2caa15", hmr: void 0, url: "/build/manifest-6F2CAA15.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
