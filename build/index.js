@@ -126,7 +126,7 @@ __export(root_exports, {
 var import_react3 = require("@remix-run/react");
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-HSAVJEFX.css";
+var tailwind_default = "/build/_assets/tailwind-IOS6DKJN.css";
 
 // app/components/Tag.tsx
 var import_react2 = require("@remix-run/react"), import_jsx_runtime2 = require("react/jsx-runtime");
@@ -643,7 +643,7 @@ function WorkDisplay({
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center bg-black/50 p-8 backdrop-blur-sm", children: [
     /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(import_react4.Link, { to, className: "absolute left-0 top-0 -z-10 h-full w-full", children: (0, import_react5.cloneElement)(work.background, {
       muted: !0,
-      className: "object-cover w-full h-full absolute top-0 left-0 -z-10"
+      className: "object-cover w-full h-full absolute top-0 left-0 -z-10 grayscale"
     }) }),
     /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "relative max-h-full max-w-4xl cursor-default overflow-y-auto rounded-lg border border-gray-400 bg-black/20 p-4 backdrop-blur-lg", children: [
       /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "sticky top-4 z-10 mb-8 text-center text-2xl font-bold drop-shadow-text", children: work.title }),
@@ -706,14 +706,8 @@ function WorksDisplay(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_remix_utils.ClientOnly, { fallback: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_jsx_runtime10.Fragment, {}), children: () => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(WorksDisplayClient, { ...props }) });
 }
 function WorksDisplayClient({ works: works2 }) {
-  let [search, setSearch] = (0, import_react8.useSearchParams)(), { work } = (0, import_react8.useParams)(), frame = (0, import_react9.useRef)(null), itemWidth = 300, margin = 24, [width, setWidth] = (0, import_react9.useState)(0), isTrapezoidal = works2.length > width && works2.length % width === 0;
-  console.log(
-    "trapezoid",
-    isTrapezoidal,
-    width,
-    works2.length,
-    works2.length % width
-  ), (0, import_react9.useEffect)(() => {
+  let [search, setSearch] = (0, import_react8.useSearchParams)(), { work } = (0, import_react8.useParams)(), frame = (0, import_react9.useRef)(null), itemWidth = 300, margin = 24, [width, setWidth] = (0, import_react9.useState)(0), isTrapezoidal = works2.length >= width * 2 || works2.length > width && works2.length % width === 0;
+  (0, import_react9.useEffect)(() => {
     let computeResize = () => {
       let newWidth = Math.min(
         works2.length,
@@ -930,7 +924,7 @@ function Role4() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-KEU5RIBI.js", imports: ["/build/_shared/chunk-VQ5MKUXG.js", "/build/_shared/chunk-5JZIGVC6.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KMIHDFUK.js", imports: ["/build/_shared/chunk-D77U3XML.js", "/build/_shared/chunk-H5ISSZRX.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-OSCE5APV.js", imports: ["/build/_shared/chunk-XTYPOE4B.js", "/build/_shared/chunk-CSYDS45Q.js", "/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-6Y6THVOD.js", imports: ["/build/_shared/chunk-FHYP7OUQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XNS3FEZ4.js", imports: ["/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college": { id: "routes/portfolio.brooklyn-college", parentId: "root", path: "portfolio/brooklyn-college", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college-I6OGBFR7.js", imports: ["/build/_shared/chunk-XTYPOE4B.js", "/build/_shared/chunk-CSYDS45Q.js", "/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college.$work": { id: "routes/portfolio.brooklyn-college.$work", parentId: "routes/portfolio.brooklyn-college", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college.$work-WIQAJRB3.js", imports: ["/build/_shared/chunk-FHYP7OUQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "6f2caa15", hmr: void 0, url: "/build/manifest-6F2CAA15.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-KEU5RIBI.js", imports: ["/build/_shared/chunk-VQ5MKUXG.js", "/build/_shared/chunk-5JZIGVC6.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-FLPNCCL5.js", imports: ["/build/_shared/chunk-D77U3XML.js", "/build/_shared/chunk-H5ISSZRX.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role": { id: "routes/$role", parentId: "root", path: ":role", index: void 0, caseSensitive: void 0, module: "/build/routes/$role-NUBM4WYN.js", imports: ["/build/_shared/chunk-LUSTOR4D.js", "/build/_shared/chunk-CSYDS45Q.js", "/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$role.$work": { id: "routes/$role.$work", parentId: "routes/$role", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/$role.$work-QNOYC2FO.js", imports: ["/build/_shared/chunk-RFJNKX6T.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XNS3FEZ4.js", imports: ["/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college": { id: "routes/portfolio.brooklyn-college", parentId: "root", path: "portfolio/brooklyn-college", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college-K3M5OSUS.js", imports: ["/build/_shared/chunk-LUSTOR4D.js", "/build/_shared/chunk-CSYDS45Q.js", "/build/_shared/chunk-IG2OE6VD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/portfolio.brooklyn-college.$work": { id: "routes/portfolio.brooklyn-college.$work", parentId: "routes/portfolio.brooklyn-college", path: ":work", index: void 0, caseSensitive: void 0, module: "/build/routes/portfolio.brooklyn-college.$work-45RYJMPT.js", imports: ["/build/_shared/chunk-RFJNKX6T.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "58094613", hmr: void 0, url: "/build/manifest-58094613.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
